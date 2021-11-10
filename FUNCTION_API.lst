@@ -1,0 +1,228 @@
+function_prototype
+
+SC_HANDLE CreateServiceA (
+	SC_HANDLE hSCManager,
+	LPCTSTR lpServiceName,
+	LPCTSTR lpDisplayName,
+	DWORD dwDesiredAccess,
+	DWORD dwServiceType,
+	DWORD dwStartType,
+	DWORD dwErrorControl,
+	LPCTSTR lpBinaryPathName,
+	LPCTSTR lpLoadOrderGroup,
+	LPDWORD lpdwTagId,
+	LPCTSTR lpDependencies,
+	LPCTSTR lpServiceStartName,
+	LPCTSTR lpPassword 
+);
+
+// API Prototype for Advapi32.dll!CreateServiceA
+typedef SC_HANDLE (__stdcall *PROC_CreateServiceA)(
+    SC_HANDLE hSCManager,
+    LPCTSTR lpServiceName,
+    LPCTSTR lpDisplayName,
+    DWORD dwDesiredAccess,
+    DWORD dwServiceType,
+    DWORD dwStartType,
+    DWORD dwErrorControl,
+    LPCTSTR lpBinaryPathName,
+    LPCTSTR lpLoadOrderGroup,
+    LPDWORD lpdwTagId,
+    LPCTSTR lpDependencies,
+    LPCTSTR lpServiceStartName,
+    LPCTSTR lpPassword 
+);
+
+// Source Code
+HMODULE hModule = LoadLibrary(_T("Advapi32.dll"));
+if(hModule != NULL)
+{
+    PROC_CreateServiceA _CreateServiceA = (PROC_CreateServiceA)GetProcAddress(hModule, "CreateServiceA");
+    if(_CreateServiceA != NULL)
+    {
+        // TODO: Set Parameter Values
+        SC_HANDLE result = _CreateServiceA(
+            hSCManager,
+            lpServiceName,
+            lpDisplayName,
+            dwDesiredAccess,
+            dwServiceType,
+            dwStartType,
+            dwErrorControl,
+            lpBinaryPathName,
+            lpLoadOrderGroup,
+            lpdwTagId,
+            lpDependencies,
+            lpServiceStartName,
+            lpPassword 
+        );
+
+        if(result != NULL)
+        {
+            // API Call Successful
+        }
+    }
+    FreeLibrary(hModule);
+}
+
+Process	PID
+conhost.exe	5392
+
+DWORD CheckElevationEnabled (
+	BOOL* pResult 
+);
+
+// API Prototype for Kernel32.dll!CheckElevationEnabled
+typedef DWORD (__stdcall *PROC_CheckElevationEnabled)(
+    BOOL* pResult 
+);
+
+// Source Code
+HMODULE hModule = LoadLibrary(_T("Kernel32.dll"));
+if(hModule != NULL)
+{
+    PROC_CheckElevationEnabled _CheckElevationEnabled = (PROC_CheckElevationEnabled)GetProcAddress(hModule, "CheckElevationEnabled");
+    if(_CheckElevationEnabled != NULL)
+    {
+        // TODO: Set Parameter Values
+        DWORD result = _CheckElevationEnabled(
+            pResult 
+        );
+
+        if(result == ERROR_SUCCESS)
+        {
+            // API Call Successful
+        }
+    }
+    FreeLibrary(hModule);
+}
+
+NTSTATUS RtlCopyMappedMemory (
+	void* pDest,
+	const void* pSrc,
+	SIZE_T bytesToCopy 
+);
+
+// API Prototype for Ntdll.dll!RtlCopyMappedMemory
+typedef NTSTATUS (__stdcall *PROC_RtlCopyMappedMemory)(
+    void* pDest,
+    const void* pSrc,
+    SIZE_T bytesToCopy 
+);
+
+// Source Code
+HMODULE hModule = LoadLibrary(_T("Ntdll.dll"));
+if(hModule != NULL)
+{
+    PROC_RtlCopyMappedMemory _RtlCopyMappedMemory = (PROC_RtlCopyMappedMemory)GetProcAddress(hModule, "RtlCopyMappedMemory");
+    if(_RtlCopyMappedMemory != NULL)
+    {
+        // TODO: Set Parameter Values
+        NTSTATUS result = _RtlCopyMappedMemory(
+            pDest,
+            pSrc,
+            bytesToCopy 
+        );
+
+        if(result == STATUS_SUCCESS)
+        {
+            // API Call Successful
+        }
+    }
+    FreeLibrary(hModule);
+}
+
+// API Prototype for Advapi32.dll!CryptGenKey
+typedef BOOL (__stdcall *PROC_CryptGenKey)(
+    HCRYPTPROV hProv,
+    ALG_ID Algid,
+    DWORD dwFlags,
+    HCRYPTKEY* phKey 
+);
+
+// Source Code
+HMODULE hModule = LoadLibrary(_T("Advapi32.dll"));
+if(hModule != NULL)
+{
+    PROC_CryptGenKey _CryptGenKey = (PROC_CryptGenKey)GetProcAddress(hModule, "CryptGenKey");
+    if(_CryptGenKey != NULL)
+    {
+        // TODO: Set Parameter Values
+        BOOL result = _CryptGenKey(
+            hProv,
+            Algid,
+            dwFlags,
+            phKey 
+        );
+
+        if(result != FALSE)
+        {
+            // API Call Successful
+        }
+    }
+    FreeLibrary(hModule);
+}
+
+// API Prototype for Winhttp.dll!WinHttpOpen
+typedef HINTERNET (__stdcall *PROC_WinHttpOpen)(
+    LPCWSTR pwszUserAgent,
+    DWORD dwAccessType,
+    LPCWSTR pwszProxyName,
+    LPCWSTR pwszProxyBypass,
+    DWORD dwFlags 
+);
+
+// Source Code
+HMODULE hModule = LoadLibrary(_T("Winhttp.dll"));
+if(hModule != NULL)
+{
+    PROC_WinHttpOpen _WinHttpOpen = (PROC_WinHttpOpen)GetProcAddress(hModule, "WinHttpOpen");
+    if(_WinHttpOpen != NULL)
+    {
+        // TODO: Set Parameter Values
+        HINTERNET result = _WinHttpOpen(
+            pwszUserAgent,
+            dwAccessType,
+            pwszProxyName,
+            pwszProxyBypass,
+            dwFlags 
+        );
+
+        if(result != NULL)
+        {
+            // API Call Successful
+        }
+    }
+    FreeLibrary(hModule);
+}
+
+// API Prototype for Winhttp.dll!WinHttpConnect
+typedef HINTERNET (__stdcall *PROC_WinHttpConnect)(
+    HINTERNET hSession,
+    LPCWSTR pswzServerName,
+    INTERNET_PORT nServerPort,
+    DWORD dwReserved 
+);
+
+// Source Code
+HMODULE hModule = LoadLibrary(_T("Winhttp.dll"));
+if(hModule != NULL)
+{
+    PROC_WinHttpConnect _WinHttpConnect = (PROC_WinHttpConnect)GetProcAddress(hModule, "WinHttpConnect");
+    if(_WinHttpConnect != NULL)
+    {
+        // TODO: Set Parameter Values
+        HINTERNET result = _WinHttpConnect(
+            hSession,
+            pswzServerName,
+            nServerPort,
+            dwReserved 
+        );
+
+        if(result != NULL)
+        {
+            // API Call Successful
+        }
+    }
+    FreeLibrary(hModule);
+}

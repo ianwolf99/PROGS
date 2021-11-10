@@ -1,0 +1,7 @@
+ACB8D
+-Create a malicious 
+Ap,Discnnect em all ,reconnect to Access point.
+-use mdk4[whitelist mac_addresses,specify ] as an alternative to aireplay
+-hostapd as an alternative to airbase and dnsmasq as an alternative t memory hungry isc-dhcpclient
+-Steal wpa_passphrase then perform this postexploitation.withcredentials.
+-use nmap/bettercap,Evasive powershell or binary.exe and responder,Advanced Command and cntrl server....Eg ssh tunnelling or Ngrok alternative,serveo  to hack the Acceesed ip_level

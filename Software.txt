@@ -1,0 +1,78 @@
+->Card Operating System (COS) enables microprocessor chips to
+organize data and information into file structures and provides
+controlled access to user memory (usually electrically erasable14 Smart Card Security
+programmable read only memory [EEPROM]) present on the
+card 
+->can be tracked by an oncard identifier
+->Cryto coprocessors=The algorithms supported by these cards typically include symmetric cryptography (e.g., Advanced Encryption Standard [AES], Data
+Encryption Standard [DES], triple DES), asymmetric cryptography (e.g.,
+Rivest-Shamir-Adleman [RSA], Diffie-Hellman key exchange, elliptic
+curve cryptography [ECC]), random number generation, message digest
+(e.g., Message Digest (MD5), Secure Hash Algorithm (SHA), Keyed-Hash
+Message Authentication Code (HMAC)), and so forth [10]. Microprocessorbased smart cards with coprocessors supporting cryptographic algorithms
+are known as crypto-coprocessors [11].
+-> multiapplication operating system (MULTOS) cards
+->Windows-based cards
+->Smart card–based applications work in master–slave fashion
+->electromagnetic or radiofrequency communication
+-> Hidden commands—Smart card reader gives certain commands to
+direct the overall operations that are executed by the operating system present on the card. These demands include SELECT, READ,
+UPDATE, AUTHENTICATE, VERIFY, and so forth. Only a few
+of them are actually used in practical usage. The commands that are
+a part of the initialization phase or from any precious application
+can be misapplied to retrieve confidential information or to manipulate the data.
+->%% Management server role management(MS, UI: agent,
+RCV, SND: channel(dy))played_by UI def=
+local State: nat,
+->search that on censys
+->search this even on google
+%% Session
+role session(IOT, AS, UI, MS: agent, Xor : function,
+KSAT, KSTC : (symmetric_key) set) def=
+local SND, RCV: channel(dy) composition
+application(IOT, AS, Xor, KSAT, SND, RCV) /\
+authentication(IOT, AS, UI, Xor, KSAT, KSTC, RCV,
+SND) /\ user(IOT, AS, UI, MS, Xor, KSTC, SND, RCV)
+/\ management(MS, UI, RCV, SND) end role
+->Wireless sensor network 
+->net: http://git.kernel.org/?p=linux/kernel/git/davem/net.git: for fixes to existing code
+already in the mainline tree
+net-next: http://git.kernel.org/?p=linux/kernel/git/davem/net-next.git: new code for
+the future kernel release
+->•	 wireless-testing development tree:
+git://git.kernel.org/pub/scm/linux/kernel/git/linville/wireless-testing.git
+•	 wireless development tree:
+git://git.kernel.org/pub/scm/linux/kernel/git/linville/wireless-2.6.git
+•	 wireless-next development tree:
+git://git.kernel.org/pub/scm/linux/kernel/git/linville/wireless-next-2.6.git
+->1. If Cockpit is not already installed, do the following:
+# dnf install cockpit
+2. Log in as root user, and enable the Cockpit socket:
+# systemctl enable --now cockpit.socket
+Created symlink /etc/systemd/system/sockets.target.wants/
+cockpit.socket
+→ /usr/lib/systemd/system/cockpit.socket.
+3. Open your web browser to port 9090 on the system where you just enabled Cockpit.
+You can use the hostname or IP address. Port 9090 is configured for https by
+default, although you can reconfigure that if you like to use http. Here are examples of addresses to type into your browser’s address bar:
+https://host1.example.com:9090/
+https://192.168.122.114:9090/
+4. Assuming you didn’t replace the self-signed certificate for Cockpit, you are warned
+that the connection is not safe. To accept it anyway, and depending on your
+browser, you must select Advanced and agree to an exception to allow the browser
+to use the Cockpit service.
+5. Enter your username and password. Use the root user or a user with sudo privileges if you want to change your system configuration. A regular user can see but
+not change most settings. Figure 8.1 shows an example of this window.
+6. Begin using Cockpit. The Cockpit dashboard contains a good set of features by
+default (you can add more later) on RHEL and Fedora systems. Figure 8.2 shows an
+example of the System area of the Cockpit dashboard:
+Immediately after logging in to Cockpit, you begin seeing system activity related to CPU
+usage, memory and swap, disk input/output, and network traffic. Selections in the left
+navigation pane let you begin working with logs, storage, networking, user and group
+accounts, services, and many other features on your system.
+As you proceed through the rest of this book, you will see descriptions of how to use the
+different features of Cockpit in the appropriate section. To dive deeper into any of the
+topics that you encounter with Cockpit, I recommend checking out the Cockpit project website: https://cockpit-project.org.
+Note
+No configuration is required to start this procedure. However, you can configure Cockpit to use your own OpenSSL
+certificate instead of the self-signed one used by default. This lets you avoid having to accept the unverified selfsigned certificate when you open the Cockpit interface from your browser.Chapter 8: Learning System Administration

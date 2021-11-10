@@ -1,0 +1,18 @@
+->data structure is used to denote a
+particular way of organizing data for particular types of operation.
+->In computer science, the obvious way to store an ordered collection of items is as an array
+->for loo is mostly used to operate data in Arrays
+->An invariant, as the name suggests, is a condition that does not change during execution of
+a given program or algorithm.
+->Searching is used to find the location where an element is available. There are two
+types of search techniques. They are:
+1)Linear or sequential search
+2)Binary search
+->Sorting allows an efficient arrangement of elements within a given data structure.
+->It is
+a way in which the elements are organized systematically for some purpose
+->sorting techniques
++Bubble sort
++quick sort
++selection sort
++heap sort
