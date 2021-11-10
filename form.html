@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mailing list signup</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Ordering stuff </h1>
+	<form action="/mailinglist.php" method="post">
+		<fieldset>
+			<legend>Ordering weed via form</legend>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam</p>
+			<ol>
+				<li><label for="firstlast">Name:</label>
+					<input type="text" name="username" id="firstlast">
+				</li>
+				<li><label for="email">Email:</label>
+					<input type="email" name="email" id="email">
+				</li>
+				<li><label for="telephone">Telephone:</label>
+					<input type="tel" name="telephone">
+				</li>
+				<li><label for="form-pswd">Password:</label>
+					<input type="password" name="pswd" maxlength="16">
+				</li>
+				<li><label for="photo">Photo:</label>
+					<input type="file" name="photo">
+				</li>
+				<li><label for="time">Select time:</label>
+					<input type="date" name="time">
+				</li>
+					<textarea name="location" rows="6" cols="57">Give your precise location</textarea>
+			</ol>
+			<input type="submit" name="Submit">
+		</fieldset>
+	</form>
+</body>
+</html>

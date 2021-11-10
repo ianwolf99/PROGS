@@ -1,0 +1,2 @@
+https://towardsdatascience.com/python-pandas-in-node-js-application-47a76ae42a2a
+https://medium.com/python-in-plain-english/data-visualization-with-python-and-javascript-c1c28a7212b2
